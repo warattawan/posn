@@ -1,21 +1,17 @@
-#include <iostream>
-using namespace std ;
+#include <bits/stdc++.h> 
+using namespace std;
+int fibo(int n) {
+    if (n==0 || n==1) {
+        return n;
+    } else {
+        return (fibo(n-1)+fibo(n-2)) ;
+    }
+}
+
 int main()
 {
-    int n, count = 0;
+    int n;
     cin >> n;
-    int a = 0, b = 1; 
-    if (n == 1) {
-        count++ ;          
-    }
-    if (n>=2) {
-        count += 2;
-        for (int i = 3; i <= n; ++i) {
-            int c = a + b;        
-            count++ ;
-            a = b;
-            b = c;
-        }
-    }          
-    cout << count ;
+    cout << fibo(n);
+    return 0 ;
 }
