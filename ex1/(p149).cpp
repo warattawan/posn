@@ -2,7 +2,8 @@
 using namespace std;
 
 bool Suduku_Rule(int table[9][9], int m, int n, int num) {
-    if (num )
+    Suduku_Rule = false;
+    if (num!=table[m] && num!=)
 }
 
 int main()
