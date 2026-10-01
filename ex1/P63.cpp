@@ -19,9 +19,13 @@ int main()
     }
     vector<pair<int,string>> user = {{P,"Peanut"}, {S,"Pete"}, {C,"Chertam"}};
     for (int i=0; i<3; i++) cout << user[i].second << ": " << user[i].first << '\n';
+    stable_sort(user.begin(), user.end(), [](const pair<int, string>& a, const pair<int, string>& b) {
+        return a.first < b.first;
+    });
     int max = user[2].first;
     if (user[1].first == max && user[0].first == max) cout << "Winner: Peanut & Pete & Chertam Score: " << max;
-    else if (user[1].first == max) cout << "Winner: " << user[2].second << " & " << user[1].second << " " << "Score: " << max;
-    else cout << "Winner: " << user[2].second << " " << "Score: " << max;
+    else if (user[1].first == max) {
+        cout << "Winner: " << user[1].second << " & " << user[2].second << " " << "Score: " << max;
+    } else cout << "Winner: " << user[2].second << " " << "Score: " << max;
     
 }
