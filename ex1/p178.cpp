@@ -19,7 +19,7 @@ int main()
             }
         }
     }
-    cout << "sort:";
+    cout << "sorting:";
     for (int i=0; i<n; i++) cout << " " << arr[i] ;
     avg = sum/n;
     cout << '\n' << "avg: ";
