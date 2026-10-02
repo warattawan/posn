@@ -2,14 +2,12 @@
 using namespace std;
 int main()
 {
-    string FULLname;
+    string FULLname, x;
     getline(cin,FULLname) ;
-    cout << FULLname.size() ;
-    for (int i=0; i<FULLname.size(); i++) {
-        if (isupper(FULLname[i])) {
-            if (FULLname[i]<FULLname[i+1]) {
-                text += FULLname;
-            }
-        }
+    stringstream ss(FULLname);
+    vector<string> word;
+    while (ss >> x) word.push_back(x);
+    for (string c : word) {
+        if (isupper(c[0])) cout << c[0];
     }
 }

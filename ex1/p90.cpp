@@ -4,9 +4,9 @@ void f(int n,int i) {
     if (i<=n) {
         cout << string(i,'*') << endl ;
     } else {
-        return ;
+        return;
     }
-    f(n,i+1)  ;
+    f(n,i+1);
 }
 int main()
 {
