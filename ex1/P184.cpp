@@ -2,6 +2,8 @@
 using namespace std;
 int main() 
 {
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL);
     int n,d,i,count=1;
     cin >> n >> d;
     vector<int> arr(n);
@@ -19,4 +21,5 @@ int main()
         }
     }
     cout << *max_element(room.begin(),room.end());
+    return 0;
 }
